@@ -1,0 +1,32 @@
+<!--
+    Carol Pan 
+    SoftDev1 pd7
+    HW13 -- A RESTful Journey Skyward
+    2017-11-10
+  -->
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>
+      stolen from nasa
+    </title>
+    {% if heading %}
+    
+    {% endif %}
+  </head>
+  
+  <body>
+    {% if data %}
+    <img src= {{data["hdurl"]}} width="50%" height="50%">
+    <br>
+    <p>
+      {{data["explanation"]}}
+    </p>
+    {% endif %}
+    
+  </body>
+
+</html>
