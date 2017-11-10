@@ -1,8 +1,8 @@
 '''
 Carol Pan 
 SoftDev1 pd7
-HW13 -- A RESTful Journey Skyward
-2017-11-10
+HW14 -- Getting More REST
+2017-11-13
 '''
 
 from flask import Flask, render_template
@@ -10,6 +10,9 @@ import urllib2
 import json
 
 app = Flask(__name__)
+
+test_key = "09ba17e1-1cd2-4afd-a5ac-efeb88d45a43"
+live_key = "b069dc05-9030-40d0-a4da-2188bce4dbb1"
 
 
 @app.route("/")
