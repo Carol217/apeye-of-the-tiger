@@ -11,20 +11,28 @@
 
   <head>
     <title>
-      stolen from nasa
+      Happy Holiday?
     </title>
     {% if heading %}
-    
+    {{heading}}
     {% endif %}
   </head>
   
-  <body>
-    {% if data %}
-    <img src= {{data["hdurl"]}} width="50%" height="50%">
+  <body style="padding:75px">
+    <h1> HOLIDAYS IN US 2016 <h2>
+    {% if data["holidays"] %}
+    {% for date in data["holidays"] %}
+    <h2> {{date}} </h2>
+
+    {% for holiday in data["holidays"][date]%}
+    <h3>{{holiday["name"]}}</h3>
+    date: {{holiday["date"]}} <br>
+    observed: {{holiday["observed"]}} <br>
+    public: {{holiday["public"]}}<br>
     <br>
-    <p>
-      {{data["explanation"]}}
-    </p>
+    {% endfor %}
+    
+    {% endfor %}
     {% endif %}
     
   </body>

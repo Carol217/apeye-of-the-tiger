@@ -13,12 +13,18 @@ app = Flask(__name__)
 
 test_key = "09ba17e1-1cd2-4afd-a5ac-efeb88d45a43"
 live_key = "b069dc05-9030-40d0-a4da-2188bce4dbb1"
+base_url= "https://holidayapi.com/v1/holidays?key=" + live_key
+
+#country and year are necessary params
+country= "&country="
+year="&year="
+month="&month="
 
 
 @app.route("/")
 def hello_world():
     
-    uResp = urllib2.urlopen("https://api.nasa.gov/planetary/apod?api_key=JjDqY2lvMbEfSJCAdpITWFOfpdPmPsD1lhRiO3Dt")
+    uResp = urllib2.urlopen(base_url + country + "US" + year + "2016")
     url = uResp.geturl()
     head = uResp.info()
     data = uResp.read()
