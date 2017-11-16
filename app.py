@@ -12,8 +12,8 @@ import json
 app = Flask(__name__)
 
 test_key = "09ba17e1-1cd2-4afd-a5ac-efeb88d45a43"
-live_key = "b069dc05-9030-40d0-a4da-2188bce4dbb1"
-base_url= "https://holidayapi.com/v1/holidays?key=" + live_key
+
+base_url= "https://holidayapi.com/v1/holidays?key=" + test_key
 
 #country and year are necessary params
 country= "&country="
